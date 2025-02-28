@@ -19,19 +19,19 @@ const Login = () => {
     const data = await res.json();
     if (res.ok) {
       localStorage.setItem("token", data.token);
-      navigate("/Home"); // Navigate to the Home page after successful login
+      navigate("/Home");
     } else {
       alert(data.msg);
     }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-purple-600 to-indigo-600 flex items-center justify-center p-6">
-      <div className="bg-white p-8 rounded-lg shadow-2xl max-w-md w-full">
-        <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Login</h2>
+    <div className="min-h-screen bg-white flex items-center justify-center p-6">
+      <div className="bg-white p-10 rounded-2xl shadow-xl max-w-md w-full transform hover:scale-105 transition duration-300">
+        <h2 className="text-4xl font-bold text-gray-800 mb-8 text-center">Login</h2>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
               Email
             </label>
             <input
@@ -40,11 +40,11 @@ const Login = () => {
               placeholder="Enter your email"
               onChange={handleChange}
               required
-              className="mt-1 block w-full px-4 py-2 bg-gray-50 border border-gray-300 rounded-md text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              className="w-full px-4 py-2 bg-gray-50 text-gray-800 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
             />
           </div>
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
               Password
             </label>
             <input
@@ -53,21 +53,21 @@ const Login = () => {
               placeholder="Enter your password"
               onChange={handleChange}
               required
-              className="mt-1 block w-full px-4 py-2 bg-gray-50 border border-gray-300 rounded-md text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              className="w-full px-4 py-2 bg-gray-50 text-gray-800 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
             />
           </div>
           <button
             type="submit"
-            className="w-full py-2 px-4 bg-purple-600 hover:bg-purple-700 rounded-md text-white font-semibold focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transition duration-300"
+            className="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-900 transition duration-300 font-semibold focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
           >
             Login
           </button>
         </form>
         <p className="mt-6 text-center text-sm text-gray-600">
-          Don't have an account?{" "}
+          Don't have an account? {" "}
           <button
             onClick={() => navigate("/signup")}
-            className="text-purple-600 hover:text-purple-700 font-semibold focus:outline-none"
+            className="text-black hover:text-gray-800 font-semibold focus:outline-none"
           >
             Sign Up
           </button>
