@@ -17,7 +17,7 @@
         "@mantine/hooks": "^7.16.2",
         "@mui/material": "^6.4.3",
         "@tabler/icons-react": "^3.29.0",
-        "axios": "^1.7.9",
+        "axios": "^1.8.1",
         "leaflet": "^1.9.4",
         "leaflet-fullscreen": "^1.0.2",
         "leaflet.fullscreen": "^3.0.2",
@@ -32,6 +32,8 @@
         "react-slick": "^0.30.3",
         "react-swipeable": "^7.0.2",
         "slick-carousel": "^1.8.1",
+        "socket.io": "^4.8.1",
+        "socket.io-client": "^4.8.1",
         "swiper": "^11.2.2"
     },
     "devDependencies": {
