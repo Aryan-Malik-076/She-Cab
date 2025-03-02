@@ -79,7 +79,7 @@ const DriverTracking = () => {
   }, [selectedDriver, userLocation, destinationCoords]);
 
   return (
-    <div className="flex flex-col items-center p-4">
+    <div className="flex flex-col items-center p-4 h-screen">
       <h1 className="text-2xl font-bold text-center mb-4">Driver Tracking System</h1>
 
       <div className="flex space-x-4 mb-4">
@@ -100,7 +100,7 @@ const DriverTracking = () => {
         </button>
       </div>
 
-      <MapContainer center={[33.7700, 72.3600]} zoom={13} style={{ height: "500px", width: "100%" }}>
+      <MapContainer center={[33.7700, 72.3600]} zoom={13} style={{ height: "80vh", width: "100%" }}>
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
         {userLocation && (
